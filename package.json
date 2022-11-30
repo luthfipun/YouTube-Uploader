@@ -1,6 +1,6 @@
 {
 	"name": "@luthfipun/yt-uploader",
-	"version": "1.0.11",
+	"version": "1.0.12",
 	"description": "YouTube Uploader",
 	"main": "index.js",
 	"scripts": {
