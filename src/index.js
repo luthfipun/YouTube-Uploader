@@ -15,15 +15,21 @@ export class YoutubeUploader {
 	Browser;
 	MainPage;
 	privacy = 'PUBLIC';
+	chromiumPath;
+
+	constructor(chromiumPath) {
+		this.chromiumPath = chromiumPath;
+	}
 
 	// For opening the chromium browser
-	OpenBrowser = async Directory => {
+	OpenBrowser = async directory => {
 		try {
 			return await Puppeteer.launch({
 				headless: false,
 				defaultViewport: null,
-				userDataDir: Directory,
+				userDataDir: directory,
 				ignoreDefaultArgs: ['--disable-extensions'],
+				executablePath: this.chromiumPath,
 			});
 		} catch (err) {
 			console.log(err);
