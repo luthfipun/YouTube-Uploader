@@ -25,6 +25,7 @@
 		"type": "git",
 		"url": "git+https://github.com/luthfipun/YouTube-Uploader.git"
 	},
+	"type": "module",
 	"bugs": {
 		"url": "https://github.com/luthfipun/YouTube-Uploader/issues"
 	},
