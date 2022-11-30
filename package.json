@@ -21,7 +21,6 @@
 		"@babel/core": "^7.20.5",
 		"@babel/preset-env": "^7.20.2"
 	},
-	"type": "module",
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/luthfipun/YouTube-Uploader.git"
