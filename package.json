@@ -2,7 +2,8 @@
 	"name": "@luthfipun/yt-uploader",
 	"version": "1.0.2",
 	"description": "YouTube Uploader",
-	"main": "./dist/youtubeUploader.js",
+	"main": "dist/youtubeUploader",
+	"typings": "dist/youtubeUploader",
 	"scripts": {
 		"build": "babel src -d dist"
 	},
