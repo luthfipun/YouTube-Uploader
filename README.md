@@ -4,20 +4,27 @@ YouTube Upload is a program that will automatically upload video to YouTube
 
 ## Installation
 ```shell
-npm i @luthfipun/yt-uploader
+npm i @luthfipun/yt-uploader puppeteer
 ```
 or
 ```shell
-yarn add @luthfipun/yt-uploader
+yarn add @luthfipun/yt-uploader puppeteer
 ```
 
 ## Usages
 
 ```js
 const YoutubeUploader = require('@luthfipun/yt-uploader')
+//or es6
+import { YoutubeUploader } from "@luthfipun/yt-uploader";
 
 try {
-    const youtubeUploader = new YoutubeUploader()
+    const chromiumPath = ''
+    // for mac
+    // /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+
+    const youtubeUploader = new YoutubeUploader(chromiumPath)
+
     await youtubeUploader.Login(YOUR_EMAIL, YOUR_PASSWORD)
     console.log('LoggedIn to your account')
 
@@ -32,7 +39,7 @@ try {
 
     console.log('Uploading successfully')
     await youtubeUploader.CloseBrowser()
-}catch {
-    throw Error('Error...')
+}catch (e) {
+    console.log(e)
 }
 ```
