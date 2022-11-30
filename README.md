@@ -1,4 +1,4 @@
-# YouTube Upload Bot
+# YouTube Uploader
 
 YouTube Upload is a program that will automatically upload video to YouTube
 
@@ -17,7 +17,7 @@ yarn add @luthfipun/yt-uploader
 const YoutubeUploader = require('@luthfipun/yt-uploader')
 
 try {
-    const yutubeUploader = new YoutubeUploader()
+    const youtubeUploader = new YoutubeUploader()
     await youtubeUploader.Login(YOUR_EMAIL, YOUR_PASSWORD)
     console.log('LoggedIn to your account')
 
