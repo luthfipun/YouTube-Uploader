@@ -2,8 +2,7 @@
 	"name": "@luthfipun/yt-uploader",
 	"version": "1.0.9",
 	"description": "YouTube Uploader",
-	"main": "dist/youtubeUploader.js",
-	"typings": "dist/youtubeUploader.js",
+	"main": "index.js",
 	"scripts": {
 		"build": "babel src -d dist"
 	},
@@ -25,9 +24,13 @@
 		"type": "git",
 		"url": "git+https://github.com/luthfipun/YouTube-Uploader.git"
 	},
-	"type": "module",
 	"bugs": {
 		"url": "https://github.com/luthfipun/YouTube-Uploader/issues"
 	},
-	"homepage": "https://github.com/luthfipun/YouTube-Uploader#readme"
+	"homepage": "https://github.com/luthfipun/YouTube-Uploader#readme",
+	"keywords": [
+		"youtube",
+		"upload",
+		"puppeteer"
+	]
 }
