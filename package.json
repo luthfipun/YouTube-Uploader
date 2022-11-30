@@ -1,6 +1,6 @@
 {
 	"name": "@luthfipun/yt-uploader",
-	"version": "1.0.6",
+	"version": "1.0.7",
 	"description": "YouTube Uploader",
 	"main": "dist/youtubeUploader",
 	"typings": "dist/youtubeUploader",
