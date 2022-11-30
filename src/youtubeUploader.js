@@ -11,7 +11,7 @@ Puppeteer.use(UserAgentPlugin({ makeWindows: true }));
 
 const rootDir = `${process.cwd()}/browser`; // TODO: Make the "Browser" folder appear in temp folder or something
 
-class YoutubeUploader {
+export class YoutubeUploader {
 	Browser;
 	MainPage;
 	privacy = 'PUBLIC';
@@ -208,5 +208,3 @@ class YoutubeUploader {
 		}
 	};
 }
-
-export default YoutubeUploader;

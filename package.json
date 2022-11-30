@@ -3,7 +3,7 @@
 	"version": "1.0.8",
 	"description": "YouTube Uploader",
 	"main": "dist/youtubeUploader.js",
-	"typings": "src/youtubeUploader",
+	"typings": "dist/youtubeUploader.js",
 	"scripts": {
 		"build": "babel src -d dist"
 	},
