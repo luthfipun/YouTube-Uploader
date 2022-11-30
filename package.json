@@ -1,0 +1,21 @@
+{
+	"name": "yt-uploader",
+	"version": "1.0.0",
+	"description": "YouTube Uploader",
+	"main": "./src/index.js",
+	"scripts": {
+		"start": "node ./src/index.js"
+	},
+	"author": "Luthfi Abdul Azis",
+	"license": "ISC",
+	"dependencies": {
+		"delay": "^5.0.0",
+		"fs-extra": "^10.1.0",
+		"puppeteer-extra": "^3.2.3",
+		"puppeteer-extra-plugin-anonymize-ua": "^2.3.3",
+		"puppeteer-extra-plugin-stealth": "^2.9.0"
+	},
+	"devDependencies": {
+		"eslint": "^8.23.1"
+	}
+}
