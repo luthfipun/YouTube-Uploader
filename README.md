@@ -19,13 +19,13 @@ const YoutubeUploader = require('@luthfipun/yt-uploader')
 import { YoutubeUploader } from "@luthfipun/yt-uploader";
 
 try {
-    const chromiumPath = ''
-    // for mac
-    // /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+    const chromiumPath = YoutubeUploader.CHROMIUM_MAC_PATH
     // for ubuntu
-    // /usr/bin/chromium-browser
+    // YoutubeUploader.CHROMIUM_MAC_PATH
 
-    const youtubeUploader = new YoutubeUploader(chromiumPath)
+    const youtubeUploader = new YoutubeUploader(chromiumPath, DISPLAY_FOR_UBUNTU)
+
+    // optional display parameters for ubuntu, usually is ":10.0"
 
     await youtubeUploader.Login(YOUR_EMAIL, YOUR_PASSWORD)
     console.log('LoggedIn to your account')

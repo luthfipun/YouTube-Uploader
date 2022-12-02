@@ -16,9 +16,15 @@ export class YoutubeUploader {
 	MainPage;
 	privacy = 'PUBLIC';
 	chromiumPath;
+	display;
 
-	constructor(chromiumPath) {
+	static CHROMIUM_MAC_PATH =
+		'/Applications/Google Chrome.app/Contents/MacOS/Google Chrome';
+	static CHROMIUM_UBUNTU_PATH = '/usr/bin/chromium-browser';
+
+	constructor(chromiumPath, display = '') {
 		this.chromiumPath = chromiumPath;
+		this.display = display;
 	}
 
 	// For opening the chromium browser
@@ -30,6 +36,9 @@ export class YoutubeUploader {
 				userDataDir: directory,
 				ignoreDefaultArgs: ['--disable-extensions'],
 				executablePath: this.chromiumPath,
+				env: {
+					DISPLAY: this.display,
+				},
 			});
 		} catch (err) {
 			console.log(err);
