@@ -21,7 +21,7 @@ import { YoutubeUploader } from "@luthfipun/yt-uploader";
 try {
     const chromiumPath = YoutubeUploader.CHROMIUM_MAC_PATH
     // for ubuntu
-    // YoutubeUploader.CHROMIUM_MAC_PATH
+    // YoutubeUploader.CHROMIUM_UBUNTU_PATH
 
     const youtubeUploader = new YoutubeUploader(chromiumPath, DISPLAY_FOR_UBUNTU)
 
