@@ -22,6 +22,8 @@ try {
     const chromiumPath = ''
     // for mac
     // /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+    // for ubuntu
+    // /usr/bin/chromium-browser
 
     const youtubeUploader = new YoutubeUploader(chromiumPath)
 
