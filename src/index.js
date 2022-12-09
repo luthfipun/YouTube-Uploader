@@ -5,6 +5,14 @@ import Delay from 'delay';
 import FS from 'fs';
 import FSExtra from 'fs-extra';
 import { getElement } from './helpers/getElement.js';
+import {
+	CHROMIUM_MAC_PATH,
+	CHROMIUM_UBUNTU_PATH,
+	CHROMIUM_WINDOWS_PATH,
+	UPLOAD_PRIVACY_PRIVATE,
+	UPLOAD_PRIVACY_PUBLIC,
+	UPLOAD_PRIVACY_UNLISTED,
+} from './helpers/youtubeUploaderOptions.js';
 
 Puppeteer.use(StealthPlugin());
 Puppeteer.use(UserAgentPlugin({ makeWindows: true }));
@@ -14,17 +22,22 @@ const rootDir = `${process.cwd()}/browser`; // TODO: Make the "Browser" folder a
 export class YoutubeUploader {
 	Browser;
 	MainPage;
-	privacy = 'PUBLIC';
+	privacy;
 	chromiumPath;
 	display;
 
-	static CHROMIUM_MAC_PATH =
-		'/Applications/Google Chrome.app/Contents/MacOS/Google Chrome';
-	static CHROMIUM_UBUNTU_PATH = '/usr/bin/chromium-browser';
-
-	constructor(chromiumPath, display = '') {
+	constructor(
+		chromiumPath = CHROMIUM_MAC_PATH |
+			CHROMIUM_UBUNTU_PATH |
+			CHROMIUM_WINDOWS_PATH,
+		privacy = UPLOAD_PRIVACY_PUBLIC |
+			UPLOAD_PRIVACY_PRIVATE |
+			UPLOAD_PRIVACY_UNLISTED,
+		display = '',
+	) {
 		this.chromiumPath = chromiumPath;
 		this.display = display;
+		this.privacy = privacy;
 	}
 
 	// For opening the chromium browser
