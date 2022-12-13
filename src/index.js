@@ -91,7 +91,13 @@ export class YoutubeUploader {
 	};
 
 	// For uploading your video
-	UploadVideo = async (Video, Title, Description = '', Thumbnails, Tags) => {
+	UploadVideo = async (
+		Video,
+		Title,
+		Description = '',
+		Thumbnails = '',
+		Tags,
+	) => {
 		// guard clauses
 		if (!Video.length) {
 			throw new Error('Video source cannot be empty.');
@@ -144,14 +150,16 @@ export class YoutubeUploader {
 			});
 			await Delay(5000);
 
-			// Import thumbnails
-			const submitFileThumbnails = await getElement(
-				'input[id="file-loader"]',
-				this.MainPage,
-				true,
-			);
-			await submitFileThumbnails.uploadFile(Thumbnails);
-			await Delay(2000);
+			if (Thumbnails) {
+				// Import thumbnails
+				const submitFileThumbnails = await getElement(
+					'input[id="file-loader"]',
+					this.MainPage,
+					true,
+				);
+				await submitFileThumbnails.uploadFile(Thumbnails);
+				await Delay(2000);
+			}
 
 			// Make it not for kids
 

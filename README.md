@@ -36,7 +36,7 @@ try {
         VIDEO_PATH,
         VIDEO_TITLE,
         VIDEO_DESCRIPTION,
-        VIDEO_THUMBNAIL,
+        VIDEO_THUMBNAIL, // optional
         VIDEO_TAGS // sample : #test, #videotest, #testing,
     )
 
